@@ -269,7 +269,7 @@ function gameLoop() {
     const aliveEnemies = updateHUD(player, canvas.height);
     
     // Check if all normal enemies are defeated - spawn boss
-    if (aliveEnemies === 0 && !gameState.bossSpawned && enemies.length === 0) {
+    if (aliveEnemies === 0 && !gameState.bossSpawned) {
         console.log('All enemies defeated! Spawning boss...');
         gameState.bossSpawned = true;
         spawnBoss(player.x, player.y);
